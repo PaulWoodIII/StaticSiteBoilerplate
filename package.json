@@ -1,0 +1,35 @@
+{
+  "name": "static-site-boilerplate",
+  "version": "1.0.0",
+  "description": "A place to start my static sites with the scaffolding I like, the tools I use to automatically launch a website to surge.io. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "static",
+    "site",
+    "boilerplate",
+    "paul",
+    "wood",
+    "surge",
+    "html",
+    "js",
+    "css",
+    "scss",
+    "backbone",
+    "bootstrap"
+  ],
+  "author": "Paul Wood III",
+  "license": "Copyright Paul Wood III",
+  "devDependencies": {
+    "gulp-browserify": "^0.5.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-surge": "^0.1.0",
+    "bootstrap-sass": "^3.3.6",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "jquery": "^3.0.0"
+  }
+}
