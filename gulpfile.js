@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 
 var paths = {
+    fonts: ['./fonts/**/*'],
     styles: ['./scss/**/*.scss'],
     html: './index.html',
     scripts: ['./js/app.js', '!client/external/**/*.coffee'],
@@ -45,6 +46,11 @@ gulp.task('image', function() {
         .pipe(gulp.dest('./public/img'));
 });
 
+gulp.task('fonts', function() {
+    gulp.src(paths.fonts)
+        .pipe(gulp.dest('./public/fonts'));
+});
+
 var surge = require('gulp-surge')
 gulp.task('deploy', [], function() {
     return surge({
@@ -55,9 +61,10 @@ gulp.task('deploy', [], function() {
 
 gulp.task('watch', function() {
     gulp.watch('./node_modules/jquery/dist/jquery.js', ['jquery']);
-    gulp.watch(paths.js, ['js'])
-    gulp.watch(paths.styles, ['styles'])
-    gulp.watch(paths.html, ['html'])
+    gulp.watch(paths.js, ['js']);
+    gulp.watch(paths.styles, ['styles']);
+    gulp.watch(paths.html, ['html']);
+    gulp.watch(paths.fonts, ['fonts']);
     gulp.watch(paths.images, ['images']);
 });
 
